@@ -1,0 +1,100 @@
+/* Estilo para el icono */
+.custom-file-upload {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #008CBA;
+    background-color: #008CBA;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+/* Estilo para ocultar el campo de entrada de archivo nativo */
+input[type="file"] {
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.contenedor{
+    width: min(90%,700px);
+    
+}
+.ctn-qa{
+    margin-top: 5px;
+    font-size: 1.1em;
+    border:2px solid black ;
+    border-radius: 5px;
+    padding: 5px;
+}
+.ctn-boton{
+    
+    display: flex;
+    padding-right: 20px;
+    justify-content:end;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+#ctn-feedback{
+    flex-grow: 1;
+    font-weight: bold;
+    text-align: center;
+}
+/* Estilo para el botón formal */
+.ctn-boton>button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.ctn-boton>button:hover {
+    background-color: #0056b3;
+}
+#ctn-pregunta{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+/* Otras propiedades de estilo, como márgenes, pueden personalizarse según tus preferencias */
+
+
+/* Estilos para la lista de respuestas */
+.lista-respuestas {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para las respuestas */
+.respuesta {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    background-color: #fff;
+}
+
+/* Estilo para resaltar respuestas seleccionadas */
+.respuesta-seleccionada {
+    background-color: #007BFF;
+    color: #fff;
+}

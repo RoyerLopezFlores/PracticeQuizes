@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizes</title>
+    <link rel="stylesheet" type = "text/css" href="./style/index.css">
+
+</head>
+<body>
+    <div id="root">
+       <div class = "contenedor">
+            <label for ="archivo" class="custom-file-upload">
+            
+                Subir archivo
+            </label> 
+            <input type="file" id="archivo" style="display: none;" accept=".txt">
+            <div id="ctn-pregunta-respuesta" class="ctn-qa">
+                <div id="ctn-pregunta">Pregunta</div>
+                <div id="ctn-respuesta">
+                    <ul class="lista-respuestas" id="lista-alternativas">
+                        <li class="respuesta">Respuesta 1</li>
+                        <li class="respuesta">Respuesta 2</li>
+                        <li class="respuesta">Respuesta 3</li>
+                        <li class="respuesta">Respuesta 4</li>
+                        <li class="respuesta">Respuesta 4</li>
+                    </ul>
+                </div>
+                <div class="ctn-boton">
+                    <div id="ctn-feedback">Feedback</div>
+                    <button id="btn-comprobar">Comprobar</button>
+                </div>
+            </div>
+       </div>
+            
+    </div>
+    <script src="./assets/Preguntas.js"></script>
+    <script src="./assets/Alternativas.js"></script>
+    
+    <script src="./assets/eventsAlternativas.js"></script>
+    <script src="./assets/index.js"></script>
+</body>
+</html>
