@@ -105,7 +105,7 @@ class ManageQA{
         this.manageFeedback.clean();
     }
     finishQA(){
-        if(!this.manageFeedback) return
+        if(!this.manageFeedback) return;
         this.manageFeedback.finishQA(this.indexQuestion,this.intentos);
         this.manageButton.finishQA();
     }
@@ -126,6 +126,9 @@ class ManageQA{
         return this.getQuestion()
     }
     renderQuestion(){
+        if(this.manageFeedback){
+            this.manageFeedback.setText(`Pregunta: ${this.indexQuestion+1}/${this.QAs.length}`);
+        }
         const {pregunta,alternativas} = this.getQuestion();
         this.preguntaHtml.changeQuestion(pregunta);
         this.ctnAnswers.innerHTML = "";
@@ -152,6 +155,7 @@ class ManageQA{
     }
     setQA(qas){
         this.indexQuestion = 0;
+        this.intentos = 0;
         aleatorizarArray(qas);
         this.QAs = qas;
         this.manageButton.inciarQA();
