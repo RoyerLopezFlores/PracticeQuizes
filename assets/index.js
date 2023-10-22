@@ -35,15 +35,23 @@ inputArchivo.addEventListener('change', function() {
                 if(prev.length > 0){
                     objQA = prev[prev.length - 1];
                 }
+                
                 if("#" === curr[0]){
                     objQA = {pregunta: curr.slice(1),
                     alternativas:[]}
                     prev.push(objQA)
                 }
                 if(">" === curr[0]){
-                    objQA['alternativas'].push({alternativa:curr.slice(1)});
+                    const actulAlt = objQA['alternativas'];
+                    const alt = curr.slice(1)
+                    if(actulAlt.find(aa => aa.alternativa === alt)) return prev
+                    objQA['alternativas'].push({alternativa:alt});
+                    
                 }
                 if("<" === curr[0]){
+                    const actulAlt = objQA['alternativas'];
+                    const alt = curr.slice(1)
+                    objQA['alternativas'] = actulAlt.filter(aa => aa.alternativa !== alt);
                     objQA['alternativas'].push({alternativa:curr.slice(1),rpta:1});
                 }
                 return prev
